@@ -70,3 +70,5 @@ $adminReport |
 
 Import-Csv "$reportFolder\AdminReport.csv"
 
+Import-Csv "$reportFolder\AdminReport.csv" | Select-Object ComputerName, Domain
+
