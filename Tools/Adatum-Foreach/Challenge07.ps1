@@ -4,9 +4,9 @@ Import-Module ActiveDirectory
 $users = @(Get-ADUser -Filter * -Server 'LON-DC1.adatum.com')
 
 $enabled = 0
-$disabled = 0)
+$disabled = 0
 
-foreacch ($user in $users) {
+foreach ($user in $users) {
     if ($user.Enabled) {
         Write-Output "$($user.SamAccountName) : Enabled"
         $enabled++
